@@ -62,7 +62,7 @@ function M.setup(opts)
   colors.error = colors.red1
   colors.todo = colors.blue
   colors.warning = colors.yellow
-  colors.info = colors.blue2
+  colors.info = colors.green
   colors.hint = colors.teal
 
   colors.rainbow = {
