@@ -16,7 +16,7 @@ function M.get(c, opts)
     CursorIM                    = { fg = c.bg, bg = c.fg }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn                = { bg = c.bg_highlight }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine                  = { bg = c.bg_highlight }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-    Directory                   = { fg = c.blue }, -- directory names (and other special names in listings)
+    Directory                   = { fg = c.yellow }, -- directory names (and other special names in listings)
     DiffAdd                     = { bg = c.diff.add }, -- diff mode: Added line |diff.txt|
     DiffChange                  = { bg = c.diff.change }, -- diff mode: Changed line |diff.txt|
     DiffDelete                  = { bg = c.diff.delete }, -- diff mode: Deleted line |diff.txt|
@@ -63,6 +63,7 @@ function M.get(c, opts)
     SpellRare                   = { sp = c.hint, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine                  = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
     StatusLineNC                = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    StorageClass                = { fg = c.purple },
     TabLine                     = { bg = c.bg_statusline, fg = c.fg_gutter }, -- tab pages line, not active tab page label
     TabLineFill                 = { bg = c.black }, -- tab pages line, where there are no labels
     TabLineSel                  = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
@@ -77,21 +78,21 @@ function M.get(c, opts)
 
     Bold                        = { bold = true, fg = c.fg }, -- (preferred) any bold text
     Character                   = { fg = c.green }, --  a character constant: 'c', '\n'
-    Constant                    = { fg = c.orange }, -- (preferred) any constant
+    Constant                    = { fg = c.white }, -- (preferred) any constant
     Debug                       = { fg = c.orange }, --    debugging statements
     Delimiter                   =  "Special", --  character that needs attention
     Error                       = { fg = c.error }, -- (preferred) any erroneous construct
     Function                    = { fg = c.blue, style = opts.styles.functions }, -- function name (also: methods for classes)
     Identifier                  = { fg = c.magenta, style = opts.styles.variables }, -- (preferred) any variable name
     Italic                      = { italic = true, fg = c.fg }, -- (preferred) any italic text
-    Keyword                     = { fg = c.cyan, style = opts.styles.keywords }, --  any other keyword
-    Operator                    = { fg = c.blue5 }, -- "sizeof", "+", "*", etc.
-    PreProc                     = { fg = c.cyan }, -- (preferred) generic Preprocessor
-    Special                     = { fg = c.blue1 }, -- (preferred) any special symbol
+    Keyword                     = { fg = c.purple, style = opts.styles.keywords }, --  any other keyword
+    Operator                    = { fg = c.cyan }, -- "sizeof", "+", "*", etc.
+    PreProc                     = { fg = c.yellow2 }, -- (preferred) generic Preprocessor
+    Special                     = { fg = c.cyan }, -- (preferred) any special symbol
     Statement                   = { fg = c.magenta }, -- (preferred) any statement
     String                      = { fg = c.green }, --   a string constant: "this is a string"
     Todo                        = { bg = c.yellow, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    Type                        = { fg = c.blue1 }, -- (preferred) int, long, char, etc.
+    Type                        = { fg = c.yellow }, -- (preferred) int, long, char, etc.
     Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
     debugBreakpoint             = { bg = Util.blend_bg(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
     debugPC                     = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
