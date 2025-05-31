@@ -1,14 +1,14 @@
 local M = {
-  module = "tokyonight",
-  colorscheme = "tokyonight",
+  module = "tokyomoonight",
+  colorscheme = "tokyomoonight",
   opts = { style = "moon", plugins = { all = true } },
   globals = { vim = vim },
   cache = {}, ---@type table<string, boolean>
 }
 
 function M.reset()
-  require("tokyonight.util").cache.clear()
-  local colors = require("tokyonight.colors").setup()
+  require("tokyomoonight.util").cache.clear()
+  local colors = require("tokyomoonight.colors").setup()
   M.globals.colors = colors
   M.globals.c = colors
 end

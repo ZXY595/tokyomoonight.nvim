@@ -1,1 +1,1 @@
-require("tokyonight").load({ style = "moon" })
+require("tokyomoonight").load({ style = "moon" })

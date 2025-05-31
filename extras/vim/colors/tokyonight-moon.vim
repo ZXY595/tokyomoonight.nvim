@@ -1,5 +1,5 @@
 hi clear
-let g:colors_name = "tokyonight-moon"
+let g:colors_name = "tokyomoonight-moon"
   
 hi ALEErrorSign guibg=NONE guifg=#c53b53
 hi ALEWarningSign guibg=NONE guifg=#ffc777

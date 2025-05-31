@@ -1,5 +1,5 @@
 local colors = {
-  _name = "tokyonight_night",
+  _name = "tokyomoonight_night",
   _style = "night",
   bg = "#1a1b26",
   bg_dark = "#16161e",

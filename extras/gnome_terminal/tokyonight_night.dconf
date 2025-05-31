@@ -2,7 +2,7 @@
 # 1. Create a new profile for GNOME Terminal
 # 2. Copy the UUID of the new profile (bottom right corner of the preferences window)
 # 3. Replace <PROFILE_UUID> below with the copied UUID
-# 4. Execute `dconf load /org/gnome/terminal/legacy/profiles:/ < tokyonight_night.dconf`
+# 4. Execute `dconf load /org/gnome/terminal/legacy/profiles:/ < tokyomoonight_night.dconf`
 
 [:<PROFILE_UUID>]
 background-color='rgb(26, 27, 38)'
