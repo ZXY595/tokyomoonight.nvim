@@ -3,13 +3,13 @@
 Clone the repo somewhere.
 
 ```sh
-git clone https://github.com/folke/tokyonight.nvim ~/projects/tokyonight.nvim
+git clone https://github.com/folke/tokyomoonight.nvim ~/projects/tokyomoonight.nvim
 ```
 
 Add the below to your `~/.vimrc` file.
 
 ```vim
 set termguicolors
-set rtp+=~/projects/tokyonight.nvim/extras/vim
-colorscheme tokyonight
+set rtp+=~/projects/tokyomoonight.nvim/extras/vim
+colorscheme tokyomoonight
 ```

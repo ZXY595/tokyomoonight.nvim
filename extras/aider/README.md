@@ -1,6 +1,6 @@
-# Tokyo Night for aider
+# Tokyo Moon Night for aider
 
-Tokyo Night themes for the [aider](https://aider.chat) CLI tool.
+Tokyo Moon Night themes for the [aider](https://aider.chat) CLI tool.
 
 ## Usage
 

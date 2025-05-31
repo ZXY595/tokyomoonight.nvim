@@ -2,7 +2,7 @@
 
 A dark and light [Neovim](https://github.com/neovim/neovim) theme written in
 [Lua](https://www.lua.org) ported from the [Visual Studio Code
-TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
+tokyomoonight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
 [extra](#-extras) themes for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
 [Alacritty](https://github.com/alacritty/alacritty),
 [iTerm](https://iterm2.com/) and
@@ -41,7 +41,7 @@ TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
   [0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) features.
 - Terminal colors.
 - Supports all major plugins.
-- Provides [TokyoNight](https://github.com/folke/tokyonight.nvim)
+- Provides [tokyomoonight](https://github.com/folke/tokyomoonight.nvim)
   [extras](#-extras) for numerous other applications.
 
 <details>
@@ -192,7 +192,7 @@ Install the theme with your preferred package manager, such as
 
 ```lua
 {
-  "folke/tokyonight.nvim",
+  "folke/tokyomoonight.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
@@ -202,20 +202,20 @@ Install the theme with your preferred package manager, such as
 ## 🚀 Usage
 
 ```lua
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme tokyomoonight]]
 ```
 
 ```vim
-colorscheme tokyonight
+colorscheme tokyomoonight
 
 " There are also colorschemes for the different styles.
-colorscheme tokyonight-night
-colorscheme tokyonight-storm
-colorscheme tokyonight-day
-colorscheme tokyonight-moon
+colorscheme tokyomoonight-night
+colorscheme tokyomoonight-storm
+colorscheme tokyomoonight-day
+colorscheme tokyomoonight-moon
 ```
 
-Some plugins need extra configuration to work with **TokyoNight**.
+Some plugins need extra configuration to work with **tokyomoonight**.
 
 <details>
   <summary>Click here for more details</summary>
@@ -226,7 +226,7 @@ Some plugins need extra configuration to work with **TokyoNight**.
 -- Lua
 require('barbecue').setup {
   -- ... your barbecue config
-  theme = 'tokyonight',
+  theme = 'tokyomoonight',
   -- ... your barbecue config
 }
 ```
@@ -238,7 +238,7 @@ require('barbecue').setup {
 require('lualine').setup {
   options = {
     -- ... your lualine config
-    theme = 'tokyonight'
+    theme = 'tokyomoonight'
     -- ... your lualine config
   }
 }
@@ -248,7 +248,7 @@ require('lualine').setup {
 
 ```vim
 " Vim Script
-let g:lightline = {'colorscheme': 'tokyonight'}
+let g:lightline = {'colorscheme': 'tokyomoonight'}
 ```
 
 </details>
@@ -256,7 +256,7 @@ let g:lightline = {'colorscheme': 'tokyonight'}
 ## ⚙️ Configuration
 
 > [!IMPORTANT]
-> Set the configuration **BEFORE** loading the color scheme with `colorscheme tokyonight`.
+> Set the configuration **BEFORE** loading the color scheme with `colorscheme tokyomoonight`.
 
 The theme offers four styles: [storm](#storm), [moon](#moon), [night](#night),
 and [day](#day).
@@ -264,7 +264,7 @@ and [day](#day).
 The [day](#day) style is used when `{ style = "day" }` is passed to
 `setup(options)` or when `vim.o.background = "light"`.
 
-[TokyoNight](https://github.com/folke/tokyonight.nvim) uses the default options,
+[tokyomoonight](https://github.com/folke/tokyomoonight.nvim) uses the default options,
 unless `setup` is explicitly called.
 
 <details>
@@ -273,9 +273,9 @@ unless `setup` is explicitly called.
 <!-- config:start -->
 
 ```lua
----@class tokyonight.Config
+---@class tokyomoonight.Config
 ---@field on_colors fun(colors: ColorScheme)
----@field on_highlights fun(highlights: tokyonight.Highlights, colors: ColorScheme)
+---@field on_highlights fun(highlights: tokyomoonight.Highlights, colors: ColorScheme)
 M.defaults = {
   style = "moon", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
   light_style = "day", -- The theme is used when the background is set to light
@@ -303,7 +303,7 @@ M.defaults = {
 
   --- You can override specific highlights to use other groups or a hex color
   --- function will be called with a Highlights and ColorScheme table
-  ---@param highlights tokyonight.Highlights
+  ---@param highlights tokyomoonight.Highlights
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors) end,
 
@@ -319,7 +319,7 @@ M.defaults = {
     auto = true,
     -- add any plugins here that you want to enable
     -- for all possible plugins, see:
-    --   * https://github.com/folke/tokyonight.nvim/tree/main/lua/tokyonight/groups
+    --   * https://github.com/folke/tokyomoonight.nvim/tree/main/lua/tokyomoonight/groups
     -- telescope = true,
   },
 }
@@ -340,16 +340,16 @@ How the highlight groups are calculated:
    groups.
 
 For default values of `colors` and `highlights`, please consult the
-[storm](extras/lua/tokyonight_storm.lua),
-[moon](extras/lua/tokyonight_moon.lua),
-[night](extras/lua/tokyonight_night.lua), and
-[day](extras/lua/tokyonight_day.lua) themes.
+[storm](extras/lua/tokyomoonight_storm.lua),
+[moon](extras/lua/tokyomoonight_moon.lua),
+[night](extras/lua/tokyomoonight_night.lua), and
+[day](extras/lua/tokyomoonight_day.lua) themes.
 
 <details>
   <summary>Settings & Changing Colors</summary>
 
 ```lua
-require("tokyonight").setup({
+require("tokyomoonight").setup({
   -- use the night style
   style = "night",
   -- disable italic for functions
@@ -370,7 +370,7 @@ require("tokyonight").setup({
   <summary>Borderless Telescope</summary>
 
 ```lua
-require("tokyonight").setup({
+require("tokyomoonight").setup({
   on_highlights = function(hl, c)
     local prompt = "#2d3149"
     hl.TelescopeNormal = {
@@ -436,8 +436,8 @@ You can easily use the color palette for other plugins inside your
 [Neovim](https://github.com/neovim/neovim) configuration:
 
 ```lua
-local colors = require("tokyonight.colors").setup() -- pass in any of the config options as explained above
-local util = require("tokyonight.util")
+local colors = require("tokyomoonight.colors").setup() -- pass in any of the config options as explained above
+local util = require("tokyomoonight.util")
 
 aplugin.background = colors.bg_dark
 aplugin.my_error = util.lighten(colors.red1, 0.3) -- number between 0 and 1. 0 results in white, 1 results in red1
