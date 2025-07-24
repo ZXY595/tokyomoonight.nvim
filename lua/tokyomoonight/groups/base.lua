@@ -30,10 +30,10 @@ function M.get(c, opts)
     SignColumn                  = { bg = opts.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
     SignColumnSB                = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute                  = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
-    LineNr                      = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr                = { fg = c.orange, bold = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    LineNrAbove                 = { fg = c.fg_gutter },
-    LineNrBelow                 = { fg = c.fg_gutter },
+    LineNr                      = { fg = c.comment }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr                = { fg = c.pink, bold = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    LineNrAbove                 = { fg = c.comment },
+    LineNrBelow                 = { fg = c.comment },
     MatchParen                  = { fg = c.orange, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg                     = { fg = c.fg_dark, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea                     = { fg = c.fg_dark }, -- Area for messages and cmdline
@@ -87,7 +87,7 @@ function M.get(c, opts)
     Italic                      = { italic = true, fg = c.fg }, -- (preferred) any italic text
     Keyword                     = { fg = c.purple, style = opts.styles.keywords }, --  any other keyword
     Operator                    = { fg = c.cyan }, -- "sizeof", "+", "*", etc.
-    PreProc                     = { fg = c.yellow2 }, -- (preferred) generic Preprocessor
+    PreProc                     = { fg = c.orange3 }, -- (preferred) generic Preprocessor
     Special                     = { fg = c.cyan }, -- (preferred) any special symbol
     Statement                   = { fg = c.magenta }, -- (preferred) any statement
     String                      = { fg = c.green }, --   a string constant: "this is a string"
