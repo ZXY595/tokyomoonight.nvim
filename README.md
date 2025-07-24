@@ -208,11 +208,8 @@ vim.cmd[[colorscheme tokyomoonight]]
 ```vim
 colorscheme tokyomoonight
 
-" There are also colorschemes for the different styles.
-colorscheme tokyomoonight-night
+" There is only one colorscheme :p
 colorscheme tokyomoonight-storm
-colorscheme tokyomoonight-day
-colorscheme tokyomoonight-moon
 ```
 
 Some plugins need extra configuration to work with **tokyomoonight**.
@@ -258,11 +255,7 @@ let g:lightline = {'colorscheme': 'tokyomoonight'}
 > [!IMPORTANT]
 > Set the configuration **BEFORE** loading the color scheme with `colorscheme tokyomoonight`.
 
-The theme offers four styles: [storm](#storm), [moon](#moon), [night](#night),
-and [day](#day).
-
-The [day](#day) style is used when `{ style = "day" }` is passed to
-`setup(options)` or when `vim.o.background = "light"`.
+The theme offers one style: [storm](#storm)
 
 [tokyomoonight](https://github.com/folke/tokyomoonight.nvim) uses the default options,
 unless `setup` is explicitly called.
@@ -277,7 +270,7 @@ unless `setup` is explicitly called.
 ---@field on_colors fun(colors: ColorScheme)
 ---@field on_highlights fun(highlights: tokyomoonight.Highlights, colors: ColorScheme)
 M.defaults = {
-  style = "moon", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+  style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
   light_style = "day", -- The theme is used when the background is set to light
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
@@ -340,10 +333,7 @@ How the highlight groups are calculated:
    groups.
 
 For default values of `colors` and `highlights`, please consult the
-[storm](extras/lua/tokyomoonight_storm.lua),
-[moon](extras/lua/tokyomoonight_moon.lua),
-[night](extras/lua/tokyomoonight_night.lua), and
-[day](extras/lua/tokyomoonight_day.lua) themes.
+[storm](extras/lua/tokyomoonight_storm.lua)
 
 <details>
   <summary>Settings & Changing Colors</summary>
@@ -351,7 +341,7 @@ For default values of `colors` and `highlights`, please consult the
 ```lua
 require("tokyomoonight").setup({
   -- use the night style
-  style = "night",
+  style = "storm",
   -- disable italic for functions
   styles = {
     functions = {}
