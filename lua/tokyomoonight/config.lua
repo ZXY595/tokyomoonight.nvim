@@ -1,6 +1,6 @@
 local M = {}
 
-M.version = "4.11.0" -- x-release-please-version
+M.version = "4.13.0" -- x-release-please-version
 
 ---@class tokyomoonight.Config
 ---@field on_colors fun(colors: ColorScheme)
