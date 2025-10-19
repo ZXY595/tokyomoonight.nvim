@@ -22,7 +22,7 @@ function M.get(c)
     ["@lsp.type.keyword"]                      = "@keyword",
     ["@lsp.type.lifetime"]                     = "@keyword.storage",
     ["@lsp.type.namespace"]                    = "@module",
-    -- ["@lsp.type.namespace.python"]             = "@variable",
+    ["@lsp.type.namespace.python"]             = "@variable",
     ["@lsp.type.number"]                       = "@number",
     ["@lsp.type.operator"]                     = "@operator",
     ["@lsp.type.parameter"]                    = "@variable.parameter",
