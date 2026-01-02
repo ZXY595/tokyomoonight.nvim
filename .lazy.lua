@@ -1,7 +1,7 @@
 local M = {
   module = "tokyomoonight",
   colorscheme = "tokyomoonight",
-  opts = { style = "moon", plugins = { all = true } },
+  opts = { style = "storm", plugins = { all = true } },
   globals = { vim = vim },
   cache = {}, ---@type table<string, boolean>
 }

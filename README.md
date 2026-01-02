@@ -1,39 +1,9 @@
-# 🏙 Tokyo Night
+# 🌌 TokyoMooNight
 
-A dark and light [Neovim](https://github.com/neovim/neovim) theme written in
-[Lua](https://www.lua.org) ported from the [Visual Studio Code
-tokyomoonight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Includes
-[extra](#-extras) themes for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html),
-[Alacritty](https://github.com/alacritty/alacritty),
-[iTerm](https://iterm2.com/) and
-[Fish](https://fishshell.com/docs/current/index.html).
+A neovim theme port of [🌌 moonlight](https://github.com/atomiks/moonlight-vscode-theme) based on [🏙 tokyonight.nvim](https://github.com/folke/tokyonight.nvim),
+optimized for **rust** code highlights!
 
-<table width="100%">
-  <tr>
-    <th>Moon</th>
-    <th>Storm</th>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png" />
-    </td>
-    <td width="50%">
-      <img src="https://user-images.githubusercontent.com/292349/115295095-3a9e5080-a10e-11eb-9aed-6054488c46ce.png" />
-    </td>
-  </tr>
-  <tr>
-    <th>Night</th>
-    <th>Day</th>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png" />
-    </td>
-    <td width="50%">
-      <img src="https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png" />
-    </td>
-  </tr>
-</table>
+<img width="2810" height="1622" src="https://github.com/user-attachments/assets/5c42e749-5757-48eb-9a57-34bf6119f079" />
 
 ## ✨ Features
 
@@ -58,12 +28,14 @@ tokyomoonight](https://github.com/enkia/tokyo-night-vscode-theme) theme. Include
 | [blink.cmp](https://github.com/Saghen/blink.cmp) | [`blink`](lua/tokyonight/groups/blink.lua) |
 | [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | [`bufferline`](lua/tokyonight/groups/bufferline.lua) |
 | [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | [`cmp`](lua/tokyonight/groups/cmp.lua) |
-| [codeium.nvim](https://github.com/Exafunction/codeium.nvim) | [`codeium`](lua/tokyonight/groups/codeium.lua) |
+| [codeium.nvim](https://githu<img width="2810" height="1622" alt="Screenshot from 2026-01-02 23-58-05" src="https://github.com/user-attachments/assets/631cf25e-ca17-45a4-acf9-18368dc2cc9a" />
+b.com/Exafunction/codeium.nvim) | [`codeium`](lua/tokyonight/groups/codeium.lua) |
 | [copilot.lua](https://github.com/zbirenbaum/copilot.lua) | [`copilot`](lua/tokyonight/groups/copilot.lua) |
 | [nvim-dap](https://github.com/mfussenegger/nvim-dap) | [`dap`](lua/tokyonight/groups/dap.lua) |
 | [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim) | [`dashboard`](lua/tokyonight/groups/dashboard.lua) |
 | [flash.nvim](https://github.com/folke/flash.nvim) | [`flash`](lua/tokyonight/groups/flash.lua) |
-| [fzf-lua](https://github.com/ibhagwan/fzf-lua) | [`fzf`](lua/tokyonight/groups/fzf.lua) |
+| [fzf-lua](https://github.com/ibhagwan/fzf-lua) | [`fzf`](lua/tokyonight/groups/fzf.lua) |<img width="2810" height="1622" alt="Screenshot from 2026-01-02 23-58-05" src="https://github.com/user-attachments/assets/ce8fcc6f-f910-41a7-9faf-9d62c3cd9274" />
+
 | [vim-gitgutter](https://github.com/airblade/vim-gitgutter) | [`gitgutter`](lua/tokyonight/groups/gitgutter.lua) |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | [`gitsigns`](lua/tokyonight/groups/gitsigns.lua) |
 | [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim) | [`glyph-palette`](lua/tokyonight/groups/glyph-palette.lua) |
@@ -192,7 +164,7 @@ Install the theme with your preferred package manager, such as
 
 ```lua
 {
-  "folke/tokyomoonight.nvim",
+  "ZXY595/tokyomoonight.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
@@ -202,13 +174,11 @@ Install the theme with your preferred package manager, such as
 ## 🚀 Usage
 
 ```lua
-vim.cmd[[colorscheme tokyomoonight]]
+vim.cmd[[colorscheme tokyomoonight-storm]]
 ```
 
 ```vim
-colorscheme tokyomoonight
-
-" There is only one colorscheme :p
+# There is only one colorscheme :p
 colorscheme tokyomoonight-storm
 ```
 
@@ -432,7 +402,3 @@ local util = require("tokyomoonight.util")
 aplugin.background = colors.bg_dark
 aplugin.my_error = util.lighten(colors.red1, 0.3) -- number between 0 and 1. 0 results in white, 1 results in red1
 ```
-
-## 🔥 Contributing
-
-Pull requests are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding new extras and general contribution guidelines.

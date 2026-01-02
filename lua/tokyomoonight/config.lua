@@ -6,7 +6,7 @@ M.version = "4.14.1" -- x-release-please-version
 ---@field on_colors fun(colors: ColorScheme)
 ---@field on_highlights fun(highlights: tokyomoonight.Highlights, colors: ColorScheme)
 M.defaults = {
-  style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+  style = "storm", -- The theme comes in just one style: `storm`,
   light_style = "day", -- The theme is used when the background is set to light
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
